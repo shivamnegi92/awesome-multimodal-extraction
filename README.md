@@ -29,6 +29,7 @@ with every link verified live by CI.
 - [📐 Layout, Table, and Chart Extraction](#-layout-table-and-chart-extraction)
 - [📈 Chart and Diagram Extraction](#-chart-and-diagram-extraction)
 - [🎬 Video Extraction](#-video-extraction)
+- [🎙️ Audio and Speech Extraction](#-audio-and-speech-extraction)
 - [🔬 Multimodal NER (Research Lineage)](#-multimodal-ner-research-lineage)
 - [📊 Datasets and Benchmarks](#-datasets-and-benchmarks)
 - [📏 Evaluation](#-evaluation)
@@ -125,6 +126,21 @@ Extract entities, events, and structured info from video.
 - [InternVideo](https://github.com/OpenGVLab/InternVideo) - Video foundation models for recognition and multimodal tasks.
 - [🤗 LLaVA-NeXT-Video](https://huggingface.co/llava-hf/LLaVA-NeXT-Video-7B-hf) - Open video-language checkpoint for video QA and extraction.
 - [WhisperX](https://github.com/m-bain/whisperX) - Fast speech transcription with word-level timestamps for audio tracks.
+
+## 🎙️ Audio and Speech Extraction
+
+Transcribe speech, find who spoke, then extract entities from the transcript -- or extract directly with an audio LLM.
+
+- [Whisper](https://github.com/openai/whisper) - OpenAI's robust multilingual speech-recognition model.
+- [faster-whisper](https://github.com/SYSTRAN/faster-whisper) - Fast Whisper inference with CTranslate2.
+- [distil-whisper](https://github.com/huggingface/distil-whisper) - Distilled Whisper that is much faster with little accuracy loss.
+- [pyannote-audio](https://github.com/pyannote/pyannote-audio) - Speaker diarization (who spoke when) and other speech tasks.
+- [SpeechBrain](https://github.com/speechbrain/speechbrain) - All-in-one conversational-AI and speech toolkit.
+- [NVIDIA NeMo](https://github.com/NVIDIA/NeMo) - Toolkit for ASR, speaker tasks, and speech-to-text pipelines.
+- [Qwen2-Audio](https://github.com/QwenLM/Qwen2-Audio) - Audio language model that answers and extracts directly from sound.
+- [🤗 whisper-large-v3](https://huggingface.co/openai/whisper-large-v3) - State-of-the-art Whisper ASR checkpoint.
+- [🤗 Qwen2-Audio-7B-Instruct](https://huggingface.co/Qwen/Qwen2-Audio-7B-Instruct) - Instruction-tuned audio LLM for spoken-content extraction.
+- [🤗 speaker-diarization-3.1](https://huggingface.co/pyannote/speaker-diarization-3.1) - Ready-to-use speaker-diarization pipeline.
 
 ## 🔬 Multimodal NER (Research Lineage)
 
