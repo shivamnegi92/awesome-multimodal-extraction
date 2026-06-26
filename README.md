@@ -16,6 +16,10 @@ the academic Twitter-image setup; the field has since moved to **vision-language
 models** and **document AI**. This list is practitioner-first and kept current,
 with every link verified live by CI.
 
+**Not sure where to start?** This picks a tool from your constraints:
+
+![Which multimodal tool should I pick? A decision flowchart](assets/decision.gif)
+
 ## Contents
 
 - [👁️ Vision-Language Models](#-vision-language-models)
@@ -26,6 +30,8 @@ with every link verified live by CI.
 - [🔬 Multimodal NER (Research Lineage)](#-multimodal-ner-research-lineage)
 - [📊 Datasets and Benchmarks](#-datasets-and-benchmarks)
 - [📏 Evaluation](#-evaluation)
+- [📑 Papers](#-papers)
+- [📝 Blogs and Notebooks](#-blogs-and-notebooks)
 - [🔗 Related Awesome Lists](#-related-awesome-lists)
 - [📚 Tutorials and Learning](#-tutorials-and-learning)
 
@@ -38,6 +44,10 @@ Open multimodal LLMs you can prompt to read images and emit structured output.
 - [InternVL](https://github.com/OpenGVLab/InternVL) - High-performing open VLM family competitive with closed models.
 - [CogVLM](https://github.com/zai-org/CogVLM) - Powerful open visual-language foundation model.
 - [moondream](https://github.com/m87-labs/moondream) - Tiny, fast vision-language model for on-device image understanding.
+- [DeepSeek-VL2](https://github.com/deepseek-ai/DeepSeek-VL2) - Mixture-of-experts open VLM strong on documents and charts.
+- [MiniCPM-V](https://github.com/OpenBMB/MiniCPM-V) - Efficient on-device multimodal LLM with strong OCR and document skills.
+- [GOT-OCR2.0](https://github.com/Ucas-HaoranWei/GOT-OCR2.0) - General OCR theory model that reads documents, formulas, tables, and charts.
+- [mPLUG-DocOwl](https://github.com/X-PLUG/mPLUG-DocOwl) - Document-understanding VLM family from Alibaba.
 
 ## 🤗 VLM Checkpoints (Hugging Face)
 
@@ -47,6 +57,12 @@ Ready-to-run multimodal checkpoints.
 - [🤗 Florence-2-large](https://huggingface.co/microsoft/Florence-2-large) - Microsoft's compact vision foundation model for detection, OCR, and captioning.
 - [🤗 idefics2-8b](https://huggingface.co/HuggingFaceM4/idefics2-8b) - Open multimodal model that handles interleaved image-text inputs.
 - [🤗 olmOCR-7B](https://huggingface.co/allenai/olmOCR-7B-0225-preview) - AllenAI VLM specialized for high-fidelity document OCR.
+- [🤗 Pixtral-12B](https://huggingface.co/mistralai/Pixtral-12B-2409) - Mistral's open multimodal model for image + text understanding.
+- [🤗 Phi-3.5-vision](https://huggingface.co/microsoft/Phi-3.5-vision-instruct) - Small, capable multimodal model good at document reasoning.
+- [🤗 MiniCPM-V-2.6](https://huggingface.co/openbmb/MiniCPM-V-2_6) - Strong compact VLM with OCR and multi-image support.
+- [🤗 SmolVLM](https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct) - Tiny, efficient VLM for image-text extraction.
+- [🤗 DeepSeek-VL2](https://huggingface.co/deepseek-ai/deepseek-vl2) - MoE vision-language checkpoint for documents and grounding.
+- [🤗 GOT-OCR2.0](https://huggingface.co/stepfun-ai/GOT-OCR2_0) - End-to-end OCR-2.0 model checkpoint.
 
 ## 📄 Document AI and OCR
 
@@ -62,6 +78,10 @@ Turn PDFs, scans, and photos into clean, structured text.
 - [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) - Multilingual, production-grade OCR toolkit.
 - [EasyOCR](https://github.com/JaidedAI/EasyOCR) - Ready-to-use OCR for 80+ languages.
 - [Tesseract](https://github.com/tesseract-ocr/tesseract) - The classic open-source OCR engine.
+- [MarkItDown](https://github.com/microsoft/markitdown) - Microsoft tool that converts Office files, PDFs, and images to Markdown for LLMs.
+- [olmOCR](https://github.com/allenai/olmocr) - AllenAI toolkit for high-throughput, high-fidelity document OCR with a VLM.
+- [Pix2Text](https://github.com/breezedeus/Pix2Text) - Extract text, formulas, and tables from images (a free Mathpix alternative).
+- [Jina Reader](https://github.com/jina-ai/reader) - Convert any URL or PDF into clean, LLM-ready text.
 
 ## 🧩 Structured Extraction from Images
 
@@ -71,6 +91,9 @@ Go straight from an image to typed fields and JSON.
 - [Instructor](https://github.com/567-labs/instructor) - Typed, schema-validated LLM outputs; supports vision models for image extraction.
 - [BAML](https://github.com/BoundaryML/baml) - A language for typed LLM functions, including image inputs for extraction.
 - [Donut](https://github.com/clovaai/donut) - OCR-free document understanding transformer for parsing and extraction.
+- [Sparrow](https://github.com/katanaml/sparrow) - Data extraction from documents and images with VLMs and a rule engine.
+- [OmniParse](https://github.com/adithya-s-k/omniparse) - Ingest and parse any document type into structured, LLM-ready data.
+- [OmniParser](https://github.com/microsoft/OmniParser) - Microsoft tool that parses UI screenshots into structured elements.
 
 ## 📐 Layout, Table, and Chart Extraction
 
@@ -78,6 +101,7 @@ Recover structure, not just text.
 
 - [Table Transformer](https://github.com/microsoft/table-transformer) - Detect tables and their structure in documents.
 - [LayoutParser](https://github.com/Layout-Parser/layout-parser) - Deep-learning toolkit for document image layout analysis.
+- [LayoutLM (unilm)](https://github.com/microsoft/unilm) - Home of LayoutLM/LayoutLMv3 for document layout understanding and extraction.
 
 ## 🔬 Multimodal NER (Research Lineage)
 
@@ -103,6 +127,30 @@ The academic line this list grew from: entity extraction from image-text pairs.
 
 - [seqeval](https://github.com/chakki-works/seqeval) - Entity-level F1 evaluation for sequence labeling.
 - [nervaluate](https://github.com/MantisAI/nervaluate) - Nuanced NER evaluation (partial, exact, type) following SemEval.
+
+## 📑 Papers
+
+Foundational and current reading (Hugging Face Papers pages link to PDF + code).
+
+- [LLaVA](https://huggingface.co/papers/2304.08485) - Visual instruction tuning; the open multimodal-LLM blueprint.
+- [Qwen2-VL](https://huggingface.co/papers/2409.12191) - Dynamic-resolution VLM with strong document and grounding ability.
+- [Qwen2.5-VL](https://huggingface.co/papers/2502.13923) - Technical report for the Qwen2.5-VL series.
+- [Florence-2](https://huggingface.co/papers/2311.06242) - Unified vision foundation model for detection, OCR, and grounding.
+- [Donut](https://huggingface.co/papers/2111.15664) - OCR-free document understanding transformer.
+- [LayoutLMv3](https://huggingface.co/papers/2204.08387) - Unified text-and-image masking for document AI.
+- [Nougat](https://huggingface.co/papers/2308.13418) - Neural optical understanding for academic documents.
+- [GOT-OCR2.0](https://huggingface.co/papers/2409.01704) - General OCR theory toward a unified end-to-end model.
+- [MLLM Survey](https://huggingface.co/papers/2306.13549) - A survey on multimodal large language models.
+
+## 📝 Blogs and Notebooks
+
+Hands-on walkthroughs and runnable notebooks.
+
+- [HF: Document AI](https://huggingface.co/blog/document-ai) - Overview of document-AI models and how to use them.
+- [HF: IDEFICS2](https://huggingface.co/blog/idefics2) - Building and using an open multimodal model.
+- [HF: SmolVLM](https://huggingface.co/blog/smolvlm) - A small, efficient VLM and how to apply it.
+- [roboflow/notebooks](https://github.com/roboflow/notebooks) - Notebooks for VLMs, Florence-2, and vision models.
+- [Gemini Cookbook](https://github.com/google-gemini/cookbook) - Official recipes including multimodal extraction with Gemini.
 
 ## 🔗 Related Awesome Lists
 
