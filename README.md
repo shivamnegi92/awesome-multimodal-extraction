@@ -27,6 +27,8 @@ with every link verified live by CI.
 - [📄 Document AI and OCR](#-document-ai-and-ocr)
 - [🧩 Structured Extraction from Images](#-structured-extraction-from-images)
 - [📐 Layout, Table, and Chart Extraction](#-layout-table-and-chart-extraction)
+- [📈 Chart and Diagram Extraction](#-chart-and-diagram-extraction)
+- [🎬 Video Extraction](#-video-extraction)
 - [🔬 Multimodal NER (Research Lineage)](#-multimodal-ner-research-lineage)
 - [📊 Datasets and Benchmarks](#-datasets-and-benchmarks)
 - [📏 Evaluation](#-evaluation)
@@ -102,6 +104,27 @@ Recover structure, not just text.
 - [Table Transformer](https://github.com/microsoft/table-transformer) - Detect tables and their structure in documents.
 - [LayoutParser](https://github.com/Layout-Parser/layout-parser) - Deep-learning toolkit for document image layout analysis.
 - [LayoutLM (unilm)](https://github.com/microsoft/unilm) - Home of LayoutLM/LayoutLMv3 for document layout understanding and extraction.
+
+## 📈 Chart and Diagram Extraction
+
+Turn charts and plots back into the underlying data.
+
+- [🤗 DePlot](https://huggingface.co/google/deplot) - One-shot chart-image-to-data-table model from Google.
+- [🤗 MatCha](https://huggingface.co/google/matcha-base) - Chart and plot understanding pretrained model.
+- [UniChart](https://github.com/vis-nlp/UniChart) - Universal chart understanding and reasoning model.
+- [🤗 UniChart-ChartQA](https://huggingface.co/ahmed-masry/unichart-chartqa-960) - UniChart checkpoint fine-tuned for chart question answering.
+- [ChartQA](https://github.com/vis-nlp/ChartQA) - Benchmark and code for question answering over charts.
+
+## 🎬 Video Extraction
+
+Extract entities, events, and structured info from video.
+
+- [Video-LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA) - Unified video-and-image language model for understanding and extraction.
+- [Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA) - Audio-visual language model for video understanding.
+- [VideoChat (Ask-Anything)](https://github.com/OpenGVLab/Ask-Anything) - Chat-centric video understanding and question answering.
+- [InternVideo](https://github.com/OpenGVLab/InternVideo) - Video foundation models for recognition and multimodal tasks.
+- [🤗 LLaVA-NeXT-Video](https://huggingface.co/llava-hf/LLaVA-NeXT-Video-7B-hf) - Open video-language checkpoint for video QA and extraction.
+- [WhisperX](https://github.com/m-bain/whisperX) - Fast speech transcription with word-level timestamps for audio tracks.
 
 ## 🔬 Multimodal NER (Research Lineage)
 
