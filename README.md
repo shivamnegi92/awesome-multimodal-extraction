@@ -38,8 +38,7 @@ offline evaluation; no hosted inference demo is implied.
 - [🎬 Video Extraction](#-video-extraction)
 - [🎙️ Audio and Speech Extraction](#-audio-and-speech-extraction)
 - [🔬 Multimodal NER (Research Lineage)](#-multimodal-ner-research-lineage)
-- [📊 Datasets and Benchmarks](#-datasets-and-benchmarks)
-- [Evaluation](#evaluation)
+- [📊 Datasets, Benchmarks, and Evaluation](#-datasets-benchmarks-and-evaluation)
 - [Try It and Measure It](#try-it-and-measure-it)
 - [Papers](#papers)
 - [📝 Blogs and Notebooks](#-blogs-and-notebooks)
@@ -139,24 +138,38 @@ The academic line this list grew from: entity extraction from image-text pairs.
 - [MAF](https://github.com/xubodhu/MAF) - Matching-and-alignment framework for multimodal NER (WSDM 2022).
 - [HVPNeT](https://github.com/zjunlp/HVPNeT) - Hierarchical visual prefix for multimodal entity and relation extraction (NAACL 2022).
 
-## 📊 Datasets and Benchmarks
+## 📊 Datasets, Benchmarks, and Evaluation
+
+These resources serve different roles:
+
+- **Datasets** provide examples and annotations.
+- **Benchmark suites** define an evaluation task, protocol, and sometimes reference code.
+- **Metrics and evaluation tools** score outputs; a metric by itself is not a model ranking.
+
+A listed model or tool is not implied to have been evaluated on any dataset below.
+
+### Datasets
 
 - [🤗 CORD-v2](https://huggingface.co/datasets/naver-clova-ix/cord-v2) - Receipt parsing dataset for structured document extraction.
 - [🤗 FUNSD](https://huggingface.co/datasets/nielsr/funsd-layoutlmv3) - Form understanding in noisy scanned documents.
 - [DocVQA dataset](https://huggingface.co/datasets/lmms-lab/DocVQA) - Question answering over document images.
 - [ChartQA dataset](https://huggingface.co/datasets/HuggingFaceM4/ChartQA) - Question answering and extraction over charts.
-- [OmniDocBench](https://github.com/opendatalab/OmniDocBench) - Benchmark for evaluating document parsing across diverse document types and structures.
 - [XFUND](https://github.com/doc-analysis/XFUND) - Multilingual form-understanding dataset spanning seven languages.
-- [SROIE](https://github.com/zzzDavid/ICDAR-2019-SROIE) - Receipt OCR and key-information extraction benchmark from ICDAR 2019.
+- [SROIE](https://github.com/zzzDavid/ICDAR-2019-SROIE) - Receipt OCR and key-information extraction dataset (ICDAR 2019).
 
-**Note:** these benchmarks cover different tasks and splits; their scores are not directly comparable. Check each official source for current status, terms, and metric definitions before use.
+### Benchmark suites and code
 
-## Evaluation
+- [ChartQA](https://github.com/vis-nlp/ChartQA) - Benchmark and code for chart question answering; see the [original paper](https://aclanthology.org/2022.findings-acl.177/).
+- [OmniDocBench](https://github.com/opendatalab/OmniDocBench) - Benchmark for diverse PDF document parsing; see the [original paper](https://arxiv.org/abs/2412.07626).
+
+### Metrics and evaluation tools
 
 - [seqeval](https://github.com/chakki-works/seqeval) - Entity-level F1 evaluation for sequence labeling.
 - [Nervaluate](https://github.com/MantisAI/nervaluate) - Nuanced NER evaluation (partial, exact, type) following SemEval.
 
 A useful extraction evaluation separates **what was returned** from **whether it is grounded and usable**. Match metrics to the task: OCR text error, field exact match, table-cell/structure quality, reading-order accuracy, chart-value accuracy, JSON/schema validity, and source-region localization when evidence is returned. For deployment comparisons, report latency, memory, cost, and failure rate separately from quality. State dataset/version, split, metric, normalization, model revision, hardware, and sample count; include failures and limitations. Do not compare unlike metrics or treat the synthetic receipt rows in this repository as a benchmark.
+
+When reporting a benchmark result, link the original paper or an official leaderboard and name the model revision, dataset version and split, metric, and normalization. This README currently reports no leaderboard rankings or model performance claims.
 
 **Evidence matters:** a value without its source location is hard to audit. When supported, preserve page/frame, bounding box with coordinate convention, source text/crop, and calibrated confidence only where measured. Confidence scales are not comparable across models unless calibrated and tested.
 
